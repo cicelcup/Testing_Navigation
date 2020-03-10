@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Testing_Navigation</string>
+    <string name="hello_fragment_one">Hello fragment one</string>
+    <string name="hello_fragment_two">Hello fragment two</string>
+    <string name="hello_fragment_three">Hello fragment three</string>
+    <string name="button_fragment_two">go to 2</string>
+    <string name="button_fragment_three">go to 3</string>
+    <string name="button_fragment_one">go to 1</string>
+    <string name="it_comes_from">It comes from:</string>
+</resources>
