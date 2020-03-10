@@ -23,9 +23,8 @@ class FragmentOne : Fragment() {
         val name = getString(R.string.it_comes_from)
         view.findViewById<Button>(R.id.button1to2)
             .setOnClickListener {
-                findNavController()
-                    .navigate(FragmentOneDirections
-                        .actionFragmentOneToFragmentTwo("$name 1 to 2"))
+                findNavController().navigate(FragmentOneDirections
+                    .actionFragmentOneToFragmentTwo())
             }
         view.findViewById<Button>(R.id.button1to3)
             .setOnClickListener {

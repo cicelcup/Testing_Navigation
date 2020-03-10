@@ -2,9 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
-    app:startDestination="@id/fragmentOne"
-    tools:ignore="UnusedNavigation">
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/fragmentOne">
 
     <fragment
         android:id="@+id/fragmentOne"
@@ -15,7 +14,11 @@
             android:id="@+id/action_fragmentOne_to_fragmentTwo"
             app:destination="@id/fragmentTwo"
             app:enterAnim="@anim/slide_in_right"
-            app:popEnterAnim="@anim/slide_in_left" />
+            app:popEnterAnim="@anim/slide_in_left" >
+            <argument
+                android:name="name"
+                android:defaultValue="It comes from: 1 to 2" />
+        </action>
         <action
             android:id="@+id/action_fragmentOne_to_fragmentThree"
             app:destination="@id/fragmentThree"
@@ -43,7 +46,6 @@
             app:enterAnim="@anim/slide_in_below" />
         <argument
             android:name="name"
-            android:defaultValue="mierda"
             app:argType="string" />
     </fragment>
     <fragment
@@ -63,7 +65,6 @@
             app:enterAnim="@anim/slide_in_right" />
         <argument
             android:name="name"
-            android:defaultValue="mas mierda"
             app:argType="string" />
     </fragment>
 </navigation>
