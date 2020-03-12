@@ -7,4 +7,6 @@
     <string name="button_fragment_three">go to 3</string>
     <string name="button_fragment_one">go to 1</string>
     <string name="it_comes_from">It comes from:</string>
+    <string name="hello_settings_fragment">Hello settings fragment</string>
+    <string name="settings_label">Settings</string>
 </resources>
