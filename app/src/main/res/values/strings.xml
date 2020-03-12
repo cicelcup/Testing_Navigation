@@ -9,4 +9,9 @@
     <string name="it_comes_from">It comes from:</string>
     <string name="hello_settings_fragment">Hello settings fragment</string>
     <string name="settings_label">Settings</string>
+    <string name="hello_images_fragment">Hello Images fragment</string>
+    <string name="hello_music_fragment">Hello Music fragment</string>
+    <string name="screens_label">Screens</string>
+    <string name="images_label">Images</string>
+    <string name="music_label">Music</string>
 </resources>
