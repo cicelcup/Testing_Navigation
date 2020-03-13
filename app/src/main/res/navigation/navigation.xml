@@ -85,5 +85,13 @@
         android:id="@+id/musicFragment"
         android:name="com.example.testing_navigation.MusicFragment"
         android:label="fragment_music"
-        tools:layout="@layout/fragment_music" />
+        tools:layout="@layout/fragment_music">
+
+        <deepLink
+            app:uri="www.nav.com/{arg}" />
+        <argument
+            android:name="arg"
+            app:argType="string"
+            android:defaultValue='Home' />
+    </fragment>
 </navigation>
