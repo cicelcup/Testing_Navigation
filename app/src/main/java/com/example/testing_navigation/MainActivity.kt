@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.navigation.ui.navigateUp
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -20,6 +21,7 @@ import com.google.android.material.navigation.NavigationView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration : AppBarConfiguration
+    private var bottomMenu:BottomNavigationView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,8 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setBottomMenu(navigationController: NavController) {
-        val bottomMenu =
-            findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomMenu = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomMenu?.setupWithNavController(navigationController)
     }
 
@@ -70,10 +71,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        bottomMenu?.visibility = View.GONE
         return item.onNavDestinationSelected(findNavController(R.id.nav_host_fragment))
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        bottomMenu?.visibility = View.VISIBLE
         return findNavController(R.id.nav_host_fragment).navigateUp(appBarConfiguration)
     }
 }
